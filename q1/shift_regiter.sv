@@ -13,7 +13,7 @@ module shift_register #(parameter N=4)
         if (!rst_n) begin
             parallel_out <= '0;
         end else begin
-            parallel_out <= parallel_in; // Output rule
+            parallel_out <= parallel_out; // Output rule
 
             if (load_enable) begin // If load is not enabled, the regs don't load
                 if (serial_parallel) begin // Load parallel
